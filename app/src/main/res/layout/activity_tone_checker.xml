@@ -5,7 +5,49 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".ToneChecker">
 
-    <TextView android:text="@string/hello_world" android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <TextView android:id="@+id/canto_text"
+        style="@style/basic_text"
+        android:text="@string/canto_sample"
+        android:textSize="22sp"/>
+
+    <LinearLayout
+        android:id="@+id/canto_romanization_wrapper"
+        style="@style/basic_text"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@id/canto_text">
+
+        <TextView android:id="@+id/canto_romanization_text"
+            style="@style/basic_text"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:text="@string/canto_trans_sample"
+            android:layout_gravity="clip_horizontal"
+            android:gravity="center_vertical"/>
+
+        <Button android:id="@+id/play_true_pronunciation"
+            style="@style/round_button"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_toRightOf="@id/canto_romanization_text"
+            android:layout_marginLeft="8dp"
+            android:gravity="center"/>
+    </LinearLayout>
+
+    <com.jjoe64.graphview.GraphView
+        android:id="@+id/tone_graph"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_below="@id/canto_romanization_wrapper"/>
+
+    <Button android:id="@+id/record_button"
+        style="@style/round_button"
+        android:layout_height="32dp"
+        android:layout_width="32dp"
+        android:layout_below="@id/tone_graph"/>
+
+
+
+
 
 </RelativeLayout>

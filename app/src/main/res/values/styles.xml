@@ -5,4 +5,19 @@
         <!-- Customize your theme here. -->
     </style>
 
+    <style name="basic_text" parent="style/AppTheme">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">72dp</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="button" parent="style/AppTheme">
+        <item name="android:layout_width">56dp</item>
+        <item name="android:layout_height">56dp</item>
+    </style>
+
+    <style name="round_button" parent="style/AppTheme">
+        <item name="android:background">@drawable/round_button</item>
+    </style>
+
 </resources>
